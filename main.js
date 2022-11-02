@@ -1,5 +1,5 @@
 function createGame(group, player1, hour, player2) {
-  return ` 
+  return `
 <li>       
 <img src="./assets/${player1}.svg" alt="Bandeira do ${player1}" />
 <strong>${hour}</strong>          
