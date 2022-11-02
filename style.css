@@ -19,12 +19,12 @@ body * {
   font-family: "Roboto", sans-serif;
 }
 
-/* main {
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
-    align-items: flex-start;
-} */
+main {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: flex-start;
+}
 
 #app {
   width: fit-content;
@@ -33,16 +33,15 @@ body * {
 
 header {
   margin-bottom: 63px;
+  display: flex;
+  justify-content: center;
 }
 
 header img {
-  display: flex; 
-  margin: auto;
-
   width: 150px;
 }
 
-.card {  
+.card {
   padding: 40px 40px;
   text-align: center;
   background: #1d1c19;
@@ -99,7 +98,6 @@ header img {
   display: flex;
   flex-direction: column;
   gap: 24px;
-
   width: 270px;
 }
 
@@ -112,7 +110,7 @@ header img {
 
 .card ul li + li {
   padding-top: 24px;
-  border-top: 1px solid white;
+  border-top: 1px solid #ffd700;
   padding-bottom: 24px;
 }
 
