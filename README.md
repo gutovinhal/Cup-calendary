@@ -1,5 +1,6 @@
 # Cup-calendary
- NLW Copa
+
+NLW Copa
 
 Aprendendo estruturar um site.
 
@@ -122,7 +123,7 @@ Conhecimento aula 2 - absorvido
           </ul>
         </div>
 
-/* separado */
+/_ separado _/
 
     <div class="card">
           <h2>29/11 <span> Terça </span></h2>
@@ -379,3 +380,5 @@ Conhecimento aula 2 - absorvido
             </li>
           </ul>
         </div>
+
+

@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
+  padding: 0; /* Retira espaços*/
   box-sizing: border-box;
 }
 
@@ -12,7 +12,7 @@ body {
   background-color: #121214;
   background-image: url(./assets/bg.svg);
   background-position-x: center;
-  background-position-y: 55.6%;
+  background-position-y: -715px;
 }
 
 body * {
@@ -21,24 +21,31 @@ body * {
 
 main {
   display: flex;
-  flex-direction: row;
   gap: 32px;
   align-items: flex-start;
+  justify-content: center;  
 }
 
 #app {
-  width: fit-content;
-  margin: 102px auto;
+  width: fit-content; /*ajusta as caixas para o tamanho do conteúdo*/
+  margin: 52px auto;
 }
 
 header {
   margin-bottom: 63px;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 
 header img {
   width: 150px;
+}
+
+#cards {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  justify-content: center; 
+  flex-wrap: wrap;
 }
 
 .card {
@@ -52,7 +59,7 @@ header img {
 }
 
 .card h2 {
-  display: flex;
+  display: flex; 
   gap: 30px;
   justify-content: center;
   align-items: center;
@@ -63,19 +70,23 @@ header img {
 
   width: fit-content;
   margin-inline: auto;
-  margin-bottom: 20px;
+  margin-bottom: 35px;
 
   color: #f7dd43;
+
+  /*Display utilizado somente no elemento*/
 }
 
 .card h2 span {
   color: #e1e1e6;
   font-size: 14px;
   text-transform: uppercase;
+
+  /* uppercase = CAIXA ALTA*/
 }
 
-.card h1 {
-  display: flex;
+.card p {
+  display: flex; 
   gap: 30px;
 
   padding: 8px 16px;
@@ -92,6 +103,9 @@ header img {
   justify-content: center;
 
   color: #61c002;
+
+  /* border-radius = arredondamento de borda*/
+  /*padding = preenchimento*/
 }
 
 .card ul {
@@ -111,7 +125,7 @@ header img {
 .card ul li + li {
   padding-top: 24px;
   border-top: 1px solid #ffd700;
-  padding-bottom: 24px;
+  padding-bottom: 5px;
 }
 
 .card ul li strong {
