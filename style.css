@@ -20,15 +20,16 @@ body * {
 }
 
 main {
-  display: flex;
+  display: flex; /*display: flex - deixa os cards lado a lado*/
   gap: 32px;
   align-items: flex-start;
   justify-content: center;  
 }
 
 #app {
-  width: fit-content; /*ajusta as caixas para o tamanho do conteúdo*/
+  width: fit-content; /*fit-content - ajusta as caixas para o tamanho do conteúdo*/
   margin: 52px auto;
+  max-width: 1400px;
 }
 
 header {
@@ -37,15 +38,14 @@ header {
 }
 
 header img {
-  width: 150px;
+  width: 200px;
 }
 
 #cards {
   display: flex;
   gap: 32px;
-  align-items: flex-start;
   justify-content: center; 
-  flex-wrap: wrap;
+  flex-wrap: wrap; /*força itens ficarem na mesma linha ou se podem quebrar em outras linhas*/
 }
 
 .card {
@@ -104,13 +104,13 @@ header img {
 
   color: #61c002;
 
-  /* border-radius = arredondamento de borda*/
+  /*border-radius = arredondamento de borda*/
   /*padding = preenchimento*/
 }
 
 .card ul {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /*Coloca um embaixo do outro*/
   gap: 24px;
   width: 270px;
 }
