@@ -134,3 +134,12 @@ header img {
   line-height: 125%;
   color: #e1e1e6;
 }
+
+.nome-times {
+display: flex;
+gap: 30px;
+justify-content: space-between;
+color: #e1e1e6;
+font-size: 7px;
+text-transform: capitalize;
+}
