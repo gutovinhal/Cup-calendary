@@ -9,10 +9,14 @@ ul {
 }
 
 body {
+
   background-color: #121214;
   background-image: url(./assets/bg.svg);
   background-position-x: center;
   background-position-y: -715px;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 body * {
@@ -51,9 +55,11 @@ header img {
 .card {
   padding: 40px 40px;
   text-align: center;
+
   background: #1d1c19;
   border-bottom: 2px solid #f7dd43;
   border-radius: 6px;
+  
   justify-content: space-between;
   margin-bottom: 15px;
 }
