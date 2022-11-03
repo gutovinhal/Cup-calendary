@@ -89,7 +89,7 @@ header img {
   /* uppercase = CAIXA ALTA*/
 }
 
-.card p {
+.card h4 {
   display: flex;
   gap: 30px;
 
@@ -127,12 +127,12 @@ header img {
   gap: 30px;
 }
 
-.card ul li + p {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 30px;
-}
+/*.card ul li + h4 {
+  padding-top: 24px;
+  border-top: 1px solid #ffd700;
+  padding-bottom: 5px;
+
+}*/
 
 .card ul div + li {
   padding-top: 24px;
