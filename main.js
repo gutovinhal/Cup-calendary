@@ -1,17 +1,13 @@
-function createGame(player1, hour, player2, group) {
+function createGame(player1, hour, player2,) {
   let player1alt = player1.slice(-1) === "a" ? "da" : "do"
   let player2alt = player2.slice(-1) === "a" ? "da" : "do"
 
   return `
 
-<li>
-<h4> Grupo ${group}</h4>
-</li>
-
 <li> 
-<img src="./assets/${player1}.svg" alt="Bandeira do ${player1}" />
+<img src="./assets/paises/${player1}.svg" alt="Bandeira do ${player1}" />
 <strong>${hour}</strong>          
-<img src="./assets/${player2}.svg" alt="Bandeira do ${player2}" />          
+<img src="./assets/paises/${player2}.svg" alt="Bandeira do ${player2}" />          
 </li>
 
 <div class="nome-times">
@@ -23,6 +19,7 @@ function createGame(player1, hour, player2, group) {
 }
 
 function createCard(date, day, games) {
+  
 return `
 <div class="card">
 <h2> ${date} <span> ${day} </span></h2>
@@ -35,12 +32,13 @@ ${games}
 }
 
 document.querySelector("#app").innerHTML = `
+
 <header>
 <img src="./assets/copalogo.png" alt="Logo da Copa" />
 </header>
 <main id="cards">
 
-${createCard("20/11", "Domingo", createGame("qatar", "13:00", "ecuador", "B"))}
+${createCard("20/11", "Domingo", createGame("qatar", "13:00", "ecuador", "A"))}
 
 ${createCard(
   "21/11",

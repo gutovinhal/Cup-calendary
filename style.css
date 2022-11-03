@@ -58,7 +58,7 @@ header img {
   border-radius: 6px;
 
   justify-content: space-between;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   height: fit-content;
 }
 
@@ -74,7 +74,7 @@ header img {
 
   width: fit-content;
   margin-inline: auto;
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 
   color: #f7dd43;
 
@@ -83,13 +83,13 @@ header img {
 
 .card h2 span {
   color: #e1e1e6;
-  font-size: 14px;
+  font-size: 20px;
   text-transform: uppercase;
 
   /* uppercase = CAIXA ALTA*/
 }
 
-.card h4 {
+/*.card p {
   display: flex;
   gap: 30px;
 
@@ -109,8 +109,8 @@ header img {
   color: #61c002;
 
   /*border-radius = arredondamento de borda*/
-  /*padding = preenchimento*/
-}
+/*padding = preenchimento
+}*/
 
 .card ul {
   display: flex;
@@ -157,3 +157,9 @@ header img {
   font-size: 7px;
   text-transform: capitalize;
 }
+
+/*.card ul h1 {
+  padding-bottom: 5px;
+  align-items: center;
+  justify-content: center;
+}*/
