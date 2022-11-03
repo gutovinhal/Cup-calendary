@@ -74,7 +74,7 @@ header img {
 
   width: fit-content;
   margin-inline: auto;
-  margin-bottom: 35px;
+  margin-bottom: 10px;
 
   color: #f7dd43;
 
@@ -93,14 +93,14 @@ header img {
   display: flex;
   gap: 30px;
 
-  padding: 8px 16px;
+  padding: 8px 24px;
   border: 1px solid #746615;
   border-radius: 6px;
 
   width: fit-content;
   margin-bottom: 20px;
   margin-inline: auto;
-  margin-top: 20px;
+  margin-top: 10px;
 
   font-size: 15px;
   align-items: center;
@@ -116,7 +116,8 @@ header img {
   display: flex;
   flex-direction: column; /*Coloca um embaixo do outro*/
   gap: 24px;
-  width: 500px;
+  width: 270px;
+  text-align: center;
 }
 
 .card ul li {
@@ -137,6 +138,8 @@ header img {
   font-size: 25px;
   line-height: 125%;
   color: #e1e1e6;
+  text-align: center;
+  margin: auto;
 }
 
 .nome-times {
