@@ -9,14 +9,12 @@ ul {
 }
 
 body {
-
   background-color: #121214;
   background-image: url(./assets/bg.svg);
   background-position-x: center;
   background-position-y: -715px;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
 
 body * {
@@ -26,8 +24,7 @@ body * {
 main {
   display: flex; /*display: flex - deixa os cards lado a lado*/
   gap: 32px;
-  align-items: flex-start;
-  justify-content: center;  
+  justify-content: center;
 }
 
 #app {
@@ -48,7 +45,7 @@ header img {
 #cards {
   display: flex;
   gap: 32px;
-  justify-content: center; 
+  justify-content: center;
   flex-wrap: wrap; /*força itens ficarem na mesma linha ou se podem quebrar em outras linhas*/
 }
 
@@ -59,13 +56,14 @@ header img {
   background: #1d1c19;
   border-bottom: 2px solid #f7dd43;
   border-radius: 6px;
-  
+
   justify-content: space-between;
   margin-bottom: 15px;
+  height: fit-content;
 }
 
 .card h2 {
-  display: flex; 
+  display: flex;
   gap: 30px;
   justify-content: center;
   align-items: center;
@@ -92,7 +90,7 @@ header img {
 }
 
 .card p {
-  display: flex; 
+  display: flex;
   gap: 30px;
 
   padding: 8px 16px;
@@ -118,7 +116,7 @@ header img {
   display: flex;
   flex-direction: column; /*Coloca um embaixo do outro*/
   gap: 24px;
-  width: 270px;
+  width: 500px;
 }
 
 .card ul li {
@@ -128,7 +126,7 @@ header img {
   gap: 30px;
 }
 
-.card ul li + li {
+.card ul div + li {
   padding-top: 24px;
   border-top: 1px solid #ffd700;
   padding-bottom: 5px;
@@ -142,10 +140,10 @@ header img {
 }
 
 .nome-times {
-display: flex;
-gap: 30px;
-justify-content: space-between;
-color: #e1e1e6;
-font-size: 7px;
-text-transform: capitalize;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  color: #e1e1e6;
+  font-size: 7px;
+  text-transform: capitalize;
 }

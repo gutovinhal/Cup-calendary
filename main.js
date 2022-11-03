@@ -1,5 +1,5 @@
 function createGame(group, player1, hour, player2) {
-  let player1alt = player1.slice(-1)=== "a" ? "da" : "do"
+  let player1alt = player1.slice(-1) === "a" ? "da" : "do"
   let player2alt = player2.slice(-1) === "a" ? "da" : "do"
 
   return `
