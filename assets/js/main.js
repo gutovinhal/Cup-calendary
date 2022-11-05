@@ -38,7 +38,7 @@ ${games}
 document.querySelector("#app").innerHTML = `
 
 <header>
-<img src="./assets/copalogo.png" alt="Logo da Copa" />
+<img src="./assets/logo/copalogo.png" alt="Logo da Copa" />
 </header>
 <main id="cards">
 

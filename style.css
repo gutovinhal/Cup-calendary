@@ -10,11 +10,9 @@ ul {
 
 body {
   background-color: #121214;
-  background-image: url(./assets/campo1.png);
+  background-image: url(./assets/bg/bg.svg);
   background-position-x: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
+  background-position-y: 73.6%;
 }
 
 body * {
@@ -22,15 +20,19 @@ body * {
 }
 
 main {
-  display: flex; /*display: flex - deixa os cards lado a lado*/
+  display: flex;
   gap: 32px;
   justify-content: center;
+
+  /*display: flex - deixa os cards lado a lado*/
 }
 
 #app {
-  width: fit-content; /*fit-content - ajusta as caixas para o tamanho do conteúdo*/
+  width: fit-content;
   margin: 52px auto;
   max-width: 2800px;
+
+  /*fit-content - ajusta as caixas para o tamanho do conteúdo*/
 }
 
 header {
@@ -56,7 +58,7 @@ header img {
   text-align: center;
 
   background: #1d1c19;
-  border-bottom: 2px solid ;
+  border-bottom: 2px solid;
   border-radius: 10px;
   border: 2px solid #ffd700;
 
