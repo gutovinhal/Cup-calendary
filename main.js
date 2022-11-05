@@ -1,8 +1,12 @@
-function createGame(player1, hour, player2,) {
+function createGame(player1, hour, player2, group) {
   let player1alt = player1.slice(-1) === "a" ? "da" : "do"
   let player2alt = player2.slice(-1) === "a" ? "da" : "do"
 
   return `
+
+<li>
+<p> Grupo ${group} </p>
+</li>
 
 <li> 
 <img src="./assets/paises/${player1}.svg" alt="Bandeira do ${player1}" />

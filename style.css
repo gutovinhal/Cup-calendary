@@ -10,11 +10,11 @@ ul {
 
 body {
   background-color: #121214;
-  background-image: url(./assets/bg.svg);
+  background-image: url(./assets/campo1.png);
   background-position-x: center;
-  background-position-y: -715px;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 body * {
@@ -30,7 +30,7 @@ main {
 #app {
   width: fit-content; /*fit-content - ajusta as caixas para o tamanho do conteúdo*/
   margin: 52px auto;
-  max-width: 1400px;
+  max-width: 2800px;
 }
 
 header {
@@ -46,19 +46,22 @@ header img {
   display: flex;
   gap: 32px;
   justify-content: center;
-  flex-wrap: wrap; /*força itens ficarem na mesma linha ou se podem quebrar em outras linhas*/
+  flex-wrap: wrap;
+
+  /*flex-wrap = força itens ficarem na mesma linha ou se podem quebrar em outras linhas*/
 }
 
 .card {
-  padding: 40px 40px;
+  padding: 30px 30px;
   text-align: center;
 
   background: #1d1c19;
-  border-bottom: 2px solid #f7dd43;
-  border-radius: 6px;
+  border-bottom: 2px solid ;
+  border-radius: 10px;
+  border: 2px solid #ffd700;
 
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   height: fit-content;
 }
 
@@ -69,12 +72,12 @@ header img {
   align-items: center;
 
   padding: 8px 16px;
-  border: 1px solid #746615;
-  border-radius: 6px;
+  border: 1px solid #ffd700;
+  border-radius: 10px;
 
   width: fit-content;
   margin-inline: auto;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 
   color: #f7dd43;
 
@@ -89,16 +92,16 @@ header img {
   /* uppercase = CAIXA ALTA*/
 }
 
-/*.card p {
+.card p {
   display: flex;
   gap: 30px;
 
   padding: 8px 24px;
   border: 1px solid #746615;
-  border-radius: 6px;
+  border-radius: 10px;
 
   width: fit-content;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   margin-inline: auto;
   margin-top: 10px;
 
@@ -109,8 +112,8 @@ header img {
   color: #61c002;
 
   /*border-radius = arredondamento de borda*/
-/*padding = preenchimento
-}*/
+  /*padding = preenchimento*/
+}
 
 .card ul {
   display: flex;
