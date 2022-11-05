@@ -1,7 +1,41 @@
 * {
   margin: 0;
-  padding: 0; /* Retira espaços*/
+  padding: 0;
   box-sizing: border-box;
+
+  /* Padding = Retira espaços*/
+}
+
+:root {
+  --card-title-border-color: #746615;
+  --card-group-color: #746615;
+  --card-color-primary: #ffd700;
+  --bg: url(./assets/bg/bg.svg);
+
+  /* root = seleciona raiz do HTML*/
+}
+
+body.yellow {
+  --card-title-border-color: #746615;
+  --card-group-color: #746615;
+  --card-color-primary: #ffd700;
+  --bg: url(./assets/bg/bg-yellow.svg);
+}
+
+body.blue {
+  --card-title-border-color: #338af3;
+  --card-group-color: #338af3;
+  --card-color-primary: #338af3;
+  --card-bg-color: #202024;
+  --bg: url(./assets/bg/bg-blue.svg);
+}
+
+body.green {
+  --card-title-border-color: #1d8433;
+  --card-group-color: #1d8433;
+  --card-color-primary: #1d8433;
+  --card-bg-color: #1a1f1b;
+  --bg: url(./assets/bg/bg-green.svg);
 }
 
 ul {
@@ -10,13 +44,21 @@ ul {
 
 body {
   background-color: #121214;
-  background-image: url(./assets/bg/bg.svg);
-  background-position-x: center;
-  background-position-y: 73.6%;
+  background-image: var(--bg);
+  background-position: top center;
+  background-size: cover;
 }
 
 body * {
   font-family: "Roboto", sans-serif;
+}
+
+#app {
+  width: fit-content;
+  margin: auto;
+  padding-top: 52px;
+
+  /*fit-content - ajusta as caixas para o tamanho do conteúdo*/
 }
 
 main {
@@ -27,28 +69,15 @@ main {
   /*display: flex - deixa os cards lado a lado*/
 }
 
-#app {
-  width: fit-content;
-  margin: 52px auto;
-  max-width: 2800px;
-
-  /*fit-content - ajusta as caixas para o tamanho do conteúdo*/
-}
-
 header {
   margin-bottom: 63px;
   text-align: center;
 }
 
-header img {
-  width: 200px;
-}
-
 #cards {
   display: flex;
   gap: 32px;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
 
   /*flex-wrap = força itens ficarem na mesma linha ou se podem quebrar em outras linhas*/
 }
@@ -57,24 +86,22 @@ header img {
   padding: 30px 30px;
   text-align: center;
 
-  background: #1d1c19;
-  border-bottom: 2px solid;
+  background: var(--card-bg-color);
   border-radius: 10px;
-  border: 2px solid #ffd700;
+  border: 2px solid var(--card-color-primary);
 
-  justify-content: space-between;
   margin-bottom: 10px;
   height: fit-content;
 }
 
 .card h2 {
   display: flex;
-  gap: 30px;
+  gap: 16px;
   justify-content: center;
   align-items: center;
 
   padding: 8px 16px;
-  border: 1px solid #ffd700;
+  border: 2px solid var(--card-title-border-color);
   border-radius: 10px;
 
   width: fit-content;
@@ -96,10 +123,10 @@ header img {
 
 .card p {
   display: flex;
-  gap: 30px;
+  gap: 16px;
 
   padding: 8px 24px;
-  border: 1px solid #746615;
+  border: 1px solid var(--card-group-color);
   border-radius: 10px;
 
   width: fit-content;
@@ -107,11 +134,8 @@ header img {
   margin-inline: auto;
   margin-top: 10px;
 
-  font-size: 15px;
-  align-items: center;
-  justify-content: center;
-
-  color: #61c002;
+  font-size: 20px;
+  color: #e1e1e6;
 
   /*border-radius = arredondamento de borda*/
   /*padding = preenchimento*/
@@ -119,39 +143,50 @@ header img {
 
 .card ul {
   display: flex;
-  flex-direction: column; /*Coloca um embaixo do outro*/
+  flex-direction: column;
   gap: 24px;
+
   width: 270px;
-  text-align: center;
+
+  /* flex-direction: Coloca um embaixo do outro*/
 }
 
 .card ul li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
 }
-
-/*.card ul li + h4 {
-  padding-top: 24px;
-  border-top: 1px solid #ffd700;
-  padding-bottom: 5px;
-
-}*/
 
 .card ul div + li {
   padding-top: 24px;
-  border-top: 1px solid #ffd700;
+  border-top: 1px solid var(--card-color-primary);
   padding-bottom: 5px;
 }
 
 .card ul li strong {
   font-weight: 500;
-  font-size: 25px;
-  line-height: 125%;
+  font-size: 36px;
+  line-height: 100%;
   color: #e1e1e6;
-  text-align: center;
-  margin: auto;
+}
+
+.card h1,
+.card ul li strong,
+.card ul li img {
+  transition: transfrom 0.5s;
+}
+
+.card ul li strong:hover,
+.card ul li img:hover {
+  transform: rotateX(10deg);
+  transform: rotateY(10deg);
+  transform: rotateZ(10deg);
+}
+
+.card h1:hover,
+.card h2:hover,
+.card p:hover {
+  transform: scale(1.1);
 }
 
 .nome-times {
@@ -163,8 +198,26 @@ header img {
   text-transform: capitalize;
 }
 
-/*.card ul h1 {
-  padding-bottom: 5px;
-  align-items: center;
-  justify-content: center;
-}*/
+.card {
+  opacity: 0;
+  animation: appear 3s forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+
+@media (min-width: 700px) {
+  #cards {
+    max-width: 1000px;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* flex-wrap = coloca um conteúdo ao lado do outro*/
+  }
+}
