@@ -10,7 +10,8 @@
   --card-title-border-color: #746615;
   --card-group-color: #746615;
   --card-color-primary: #ffd700;
-  --bg: url(./assets/bg/bg.svg);
+  --card-bg-color: #1a1f1b;
+  --bg: url(./assets/bg/bg-black.svg);
 
   /* root = seleciona raiz do HTML*/
 }
@@ -27,7 +28,15 @@ body.blue {
   --card-group-color: #338af3;
   --card-color-primary: #338af3;
   --card-bg-color: #202024;
-  --bg: url(./assets/bg/bg-blue.svg);
+  --bg: url(./assets/bg/bg-bluedesktop.svg);
+}
+
+body.black {
+  --card-title-border-color: #f60808;
+  --card-group-color: #ff0202;
+  --card-color-primary: #f20000;
+  --card-bg-color: #202024;
+  --bg: url(./assets/bg/bg-black.svg);
 }
 
 body.green {
@@ -45,7 +54,8 @@ ul {
 body {
   background-color: #121214;
   background-image: var(--bg);
-  background-position: top center;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -78,7 +88,10 @@ header {
   display: flex;
   gap: 32px;
   flex-direction: column;
+  flex-wrap: wrap;
 
+  margin: 0 auto;
+  justify-content: center;
   /*flex-wrap = força itens ficarem na mesma linha ou se podem quebrar em outras linhas*/
 }
 
@@ -212,6 +225,14 @@ header {
   }
 }
 
+@media (max-width: 1000px) {
+  #cards {
+    max-width: 1000px;
+
+    /* flex-wrap = coloca um conteúdo ao lado do outro*/
+  }
+}
+
 @media (min-width: 700px) {
   #cards {
     max-width: 1000px;
@@ -220,4 +241,67 @@ header {
 
     /* flex-wrap = coloca um conteúdo ao lado do outro*/
   }
+}
+
+#menu {
+  display: flex;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#menu ul {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  transform: skew(-25deg);
+}
+
+#menu ul li {
+  background: #202024;
+  float: left;
+  border: 2px solid var(--card-color-primary);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  transition: all 0.3s linear;
+}
+
+#menu a:first-child {
+  border-radius: 7px 0 0 7px;
+}
+
+#menu a:last-child {
+  border-right: none;
+  border-radius: 0 7px 7px 0px;
+}
+
+#menu a:hover {
+  background: transparent;
+  color: var(--card-group-color);
+}
+#menu li:hover {
+  transform: scale(1.1);
+}
+
+#menu a {
+  display: flex;
+  padding: 10px 20px;
+  color: inherit;
+  text-decoration: none;
+  transform: skew(25deg);
+}
+
+#menu li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  border-radius: 7px 7px 7px 7px;
+}
+
+.active {
+  background-color: transparent;
+  border-radius: 5px;
+  color: #ffffff !important;
 }
