@@ -7,9 +7,9 @@
 }
 
 :root {
-  --card-title-border-color: #746615;
-  --card-group-color: #746615;
-  --card-color-primary: #ffd700;
+  --card-title-border-color: #960404;
+  --card-group-color: #960404;
+  --card-color-primary: #750505;
   --card-bg-color: #1a1f1b;
   --bg: url(./assets/bg/bg-black.svg);
 
@@ -19,30 +19,23 @@
 body.yellow {
   --card-title-border-color: #746615;
   --card-group-color: #746615;
-  --card-color-primary: #ffd700;
+  --card-color-primary: #f7dd43;
+  --card-bg-color: #3d3315;
   --bg: url(./assets/bg/bg-yellow.svg);
 }
 
 body.blue {
   --card-title-border-color: #338af3;
-  --card-group-color: #338af3;
+  --card-group-color: #0c3cb6;
   --card-color-primary: #338af3;
-  --card-bg-color: #202024;
-  --bg: url(./assets/bg/bg-bluedesktop.svg);
-}
-
-body.black {
-  --card-title-border-color: #f60808;
-  --card-group-color: #ff0202;
-  --card-color-primary: #f20000;
-  --card-bg-color: #202024;
-  --bg: url(./assets/bg/bg-black.svg);
+  --card-bg-color: #030348;
+  --bg: url(./assets/bg/bg-blue.svg);
 }
 
 body.green {
-  --card-title-border-color: #1d8433;
-  --card-group-color: #1d8433;
-  --card-color-primary: #1d8433;
+  --card-title-border-color: #047c3f;
+  --card-group-color: #046332;
+  --card-color-primary: #047c3f;
   --card-bg-color: #1a1f1b;
   --bg: url(./assets/bg/bg-green.svg);
 }
@@ -52,13 +45,8 @@ ul {
 }
 
 body {
-  background-color: #121214;
-  background-image: var(--bg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #121214 var(--bg) no-repeat top center/100%;
 }
-
 body * {
   font-family: "Roboto", sans-serif;
 }
@@ -71,14 +59,6 @@ body * {
   /*fit-content - ajusta as caixas para o tamanho do conteúdo*/
 }
 
-main {
-  display: flex;
-  gap: 32px;
-  justify-content: center;
-
-  /*display: flex - deixa os cards lado a lado*/
-}
-
 header {
   margin-bottom: 63px;
   text-align: center;
@@ -88,29 +68,31 @@ header {
   display: flex;
   gap: 32px;
   flex-direction: column;
-  flex-wrap: wrap;
 
   margin: 0 auto;
   justify-content: center;
+
   /*flex-wrap = força itens ficarem na mesma linha ou se podem quebrar em outras linhas*/
 }
 
 .card {
-  padding: 30px 30px;
+  padding: 32px 23px;
   text-align: center;
 
   background: var(--card-bg-color);
-  border-radius: 10px;
   border: 2px solid var(--card-color-primary);
+  border-radius: 6px;
 
-  margin-bottom: 10px;
   height: fit-content;
+  width: fit-content;
+
+  opacity: 0;
+  animation: appear 3s forwards;
 }
 
 .card h2 {
   display: flex;
   gap: 16px;
-  justify-content: center;
   align-items: center;
 
   padding: 8px 16px;
@@ -119,39 +101,15 @@ header {
 
   width: fit-content;
   margin-inline: auto;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 
   color: #f7dd43;
-
-  /*Display utilizado somente no elemento*/
 }
 
 .card h2 span {
   color: #e1e1e6;
-  font-size: 20px;
+  font-size: 14px;
   text-transform: uppercase;
-
-  /* uppercase = CAIXA ALTA*/
-}
-
-.card p {
-  display: flex;
-  gap: 16px;
-
-  padding: 8px 24px;
-  border: 1px solid var(--card-group-color);
-  border-radius: 10px;
-
-  width: fit-content;
-  margin-bottom: 10px;
-  margin-inline: auto;
-  margin-top: 10px;
-
-  font-size: 20px;
-  color: #e1e1e6;
-
-  /*border-radius = arredondamento de borda*/
-  /*padding = preenchimento*/
 }
 
 .card ul {
@@ -160,8 +118,6 @@ header {
   gap: 24px;
 
   width: 270px;
-
-  /* flex-direction: Coloca um embaixo do outro*/
 }
 
 .card ul li {
@@ -170,17 +126,38 @@ header {
   justify-content: space-between;
 }
 
+.card ul li + li {
+  padding-top: 24px;
+}
+
 .card ul div + li {
   padding-top: 24px;
-  border-top: 1px solid var(--card-color-primary);
-  padding-bottom: 5px;
+  border-top: 2px solid var(--card-group-color);
 }
 
 .card ul li strong {
-  font-weight: 500;
+  font-weight: 900;
   font-size: 36px;
-  line-height: 100%;
+  line-height: 125%;
+
   color: #e1e1e6;
+}
+
+.card p {
+  display: flex;
+  gap: 16px;
+
+  padding: 8px 16px;
+  border: 2px solid var(--card-title-border-color);
+  border-radius: 10px;
+
+  margin: auto;
+  margin-bottom: 10px;
+
+  color: #e1e1e6;
+
+  /*border-radius = arredondamento de borda*/
+  /*padding = preenchimento*/
 }
 
 .card h1,
@@ -211,13 +188,9 @@ header {
   text-transform: capitalize;
 }
 
-.card {
-  opacity: 0;
-  animation: appear 3s forwards;
-}
-
 @keyframes appear {
   0% {
+    transform: translateY(-50px);
     opacity: 0;
   }
   100% {
@@ -225,83 +198,37 @@ header {
   }
 }
 
-@media (max-width: 1000px) {
-  #cards {
-    max-width: 1000px;
-
-    /* flex-wrap = coloca um conteúdo ao lado do outro*/
-  }
-}
-
 @media (min-width: 700px) {
   #cards {
-    max-width: 1000px;
+    max-width: 1200px;
     flex-direction: row;
     flex-wrap: wrap;
-
-    /* flex-wrap = coloca um conteúdo ao lado do outro*/
   }
 }
 
-#menu {
+#btn-color {
   display: flex;
-  text-align: center;
+  margin: 0 auto;
   margin-top: 50px;
-  margin-bottom: 50px;
-}
+  box-shadow: 2px 2px 5px var(--card-group-color);
+  border: 2px solid var(--card-group-color);
 
-#menu ul {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  transform: skew(-25deg);
-}
-
-#menu ul li {
-  background: #202024;
-  float: left;
-  border: 2px solid var(--card-color-primary);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
-  color: rgb(255, 255, 255);
   font-weight: bolder;
-  transition: all 0.3s linear;
-}
-
-#menu a:first-child {
-  border-radius: 7px 0 0 7px;
-}
-
-#menu a:last-child {
-  border-right: none;
-  border-radius: 0 7px 7px 0px;
-}
-
-#menu a:hover {
-  background: transparent;
-  color: var(--card-group-color);
-}
-#menu li:hover {
-  transform: scale(1.1);
-}
-
-#menu a {
-  display: flex;
-  padding: 10px 20px;
-  color: inherit;
-  text-decoration: none;
-  transform: skew(25deg);
-}
-
-#menu li {
-  display: list-item;
-  text-align: -webkit-match-parent;
-  border-radius: 7px 7px 7px 7px;
-}
-
-.active {
+  border-radius: 20% 20% 20% 20%;
   background-color: transparent;
-  border-radius: 5px;
-  color: #ffffff !important;
+  color: white;
+
+  height: 50px;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+#btn-color:hover {
+  transform: scale(1.1);
+  color: var(--card-color-primary);
 }

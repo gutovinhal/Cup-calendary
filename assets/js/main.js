@@ -1,3 +1,13 @@
+const btnChangeColor = document.querySelector("#btn-color")
+
+let bgdColors = ["yellow", "blue", "green", "root"]
+let position = 0
+
+btnChangeColor.addEventListener("click", function (event) {
+  position = (position + 1) % bgdColors.length
+  event.target.parentNode.parentNode.parentNode.className = bgdColors[position]
+})
+
 function createGame(player1, hour, player2, group) {
   let player1alt = player1.slice(-1) === "a" ? "da" : "do"
   let player2alt = player2.slice(-1) === "a" ? "da" : "do"
