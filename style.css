@@ -261,7 +261,7 @@ header {
 
 /* Introdução */
 
-.h6{
+/*.h6{
 color: white;
 justify-content: center;
 align-items: center;
@@ -271,4 +271,4 @@ font-size: 80px;
 
 .h6:hover{
   transform: scale(1.1);
-}
+}*/
