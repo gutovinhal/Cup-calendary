@@ -43,7 +43,7 @@ function appresentation(text) {
 
 let delay = -0.4
 function createCard(date, day, games) {
-  delay = delay + 0.4
+  delay = delay + 0.2
 
   return `
 <div class="card" style="animation-delay: ${delay}s">
