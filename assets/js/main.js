@@ -14,7 +14,7 @@ function createGame(player1, hour, player2, group) {
 
   return `
 
-<li>
+  <li>
 <p> Grupo ${group} </p>
 </li>
 
@@ -30,15 +30,6 @@ function createGame(player1, hour, player2, group) {
 </div>
 
 `
-}
-
-function appresentation(text) {
-  return `
-
-  <div class="text">
-  <p>  ${text}
-  </p>
-  </div>`
 }
 
 let delay = -0.4
